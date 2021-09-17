@@ -1,0 +1,65 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "io.qameta.allure:allure-gradle:2.8.1"
+    }
+}
+
+plugins {
+    id 'java'
+}
+apply plugin: "io.qameta.allure"
+apply plugin: "java"
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'junit:junit:4.12'
+    implementation 'junit:junit:4.12'
+    //adicione esta linea de código
+    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    // libreria automation para web ui
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    //API - resteasy
+    testImplementation 'org.jboss.resteasy:resteasy-jaxrs:3.0.8.Final'
+    testImplementation 'org.jboss.resteasy:resteasy-client:3.0.8.Final'
+    testImplementation 'org.jboss.resteasy:resteasy-multipart-provider:3.0.8.Final'
+    testImplementation 'org.jboss.resteasy:resteasy-jackson-provider:3.0.8.Final'
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.6.1'
+
+    //JSON
+    implementation group: 'org.json', name: 'json', version: '20210307'
+
+    //Dependencia
+
+    //Junit4
+    //testImplementation group: 'io.qameta.allure', name: 'allure-junit4', version: '2.14.0'
+
+    //Junit5
+    testImplementation group: 'io.qameta.allure', name: 'allure-junit5', version: '2.14.0'
+
+}
+
+allure {
+    version = '2.14.0'
+    autoconfigure = true
+    aspectjweaver = true
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testCases.LoginTodoIst" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-17T17:55:06" hostname="DESKTOP-LPG622Q" time="77.515">
+  <properties/>
+  <testcase name="verifyTheLogin()" classname="testCases.LoginTodoIst" time="77.515"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Sep 17, 2021 12:55:06 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 93.0.4577.15 (660fc11082ba57405eca2e8c49c3e1af756fbfae-refs/branch-heads/4577@{#203}) on port 29538
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Sep 17, 2021 12:55:12 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
